@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mensajería">
+    <!-- <meta property="og:url" content=""> -->
+    <meta property="og:image" content="./img/iphone.webp">
+    <meta property="og:description" content="Conecta tus mensajes">  
+    <title>Mensajería</title>
+    <link rel="shortcut icon" href="/img/megaphone.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+    <section class="container">
+        <header style="color: hsl(246,  6%, 55%); font-weight: 500; align-items: center;">
+
+            <div class="content-menu" style="margin-top: 15px;">
+                <img src="/img/menu.svg" alt="" id="menu">
+            </div>
+
+            <nav id="nav" style="display: flex; justify-content: space-between;  margin-top: 15px; ">
+                <div style="margin-left: 30px;">
+                    <ul>
+                        <img src="/img/megaphone.svg" alt="Logo">
+                    </ul>
+                </div>
+
+                <div style="margin-right: 30px;">
+                    <ul style="list-style: none; display: flex; gap: 25px; cursor: pointer;">
+                        <li>Características</li>
+                        <li>Documentos</li>
+                        <li>Acerca de</li>
+                        <li>Ayuda</li>
+                        <li>Carreras</li>
+                        <li>Precios</li>
+                        <li>Login</li>
+                    </ul>
+                </div>
+            </nav>
+
+        </header>
+
+        <aside>
+
+
+            <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+
+                <div class="content">
+
+                    <article class="chat formBg">
+
+                        <ul id="chat" class="messages"></ul>
+                        <form action="" class="form" id="message-box">
+
+                            <input type="text" id="chat-message" class="input" autocomplete="off" style="width: 65%;"
+                                placeholder="Escribe un mensaje">
+                            <button type="submit" class="firstButton"
+                                style="width: 15%; border-radius: 8px;  border: none;  background-image: linear-gradient(93.51deg, rgb(124, 71, 235) 10.94%, rgb(233, 53, 161) 86.95%);">
+                                <img src="/img/send.svg" alt="">
+                            </button>
+                        </form>
+                    </article>
+
+                </div>
+                <div class="content">
+
+                    <article class="chat formBg">
+                        <ul id="chatBrother" class="messages"></ul>
+
+                        <form action="" class="form" id="message-box-brother">
+
+                            <input type="text" name="message" class="input" id="chat-message-brother"
+                                placeholder="Escribe un mensaje" autocomplete="off" style="width: 65%;">
+                            <button type="submit" style="width: 15%; border-radius: 8px;  border: none;">
+                                <img src="/img/send.svg" alt="">
+
+                            </button>
+
+                        </form>
+
+                    </article>
+                </div>
+            </div>
+
+        </aside>
+
+
+
+        <main>
+        </main>
+        <footer></footer>
+    </section>
+
+
+
+    <!-- script -->
+    <script src="/js/jquery.js"></script>
+    <script src="/js/sweetAlert.js"></script>
+    <script src="/socket.io/socket.io.js" charset="UTF-8"></script>
+    <script src="/js/main.js"></script>
+    <script type="module">
+        $(document).ready(function () {
+
+            let component = `
+    <div class="component"> 
+            <span>Características</span>
+            <span>Documentos</span>
+            <span>Acerca de</span>
+            <span>Ayuda</span>
+            <span>Carreras</span>
+            <span>Precios</span>
+            <span>Login</span>
+    </div>
+
+            `;
+
+            $('#menu').on('click', async function () {
+                await Swal.fire({
+                    html: `${component}`,
+                    position: 'top-end',
+                    showClass: {
+                        popup: `
+              animate__animated
+              animate__fadeInLeft
+              animate__faster
+            `,
+                    },
+                    hideClass: {
+                        popup: `
+              animate__animated
+              animate__fadeOutLeft
+              animate__faster
+            `,
+                    },
+                    grow: 'column',
+                    width: 300,
+                    background: '#7a3576',
+                    showConfirmButton: false,
+                    showCloseButton: true,
+                })
+
+
+
+            })
+
+        })
+
+    </script>
+    <!-- script -->
+</body>
+
+</html>
