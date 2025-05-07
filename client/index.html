@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Mensajería">
-    <!-- <meta property="og:url" content=""> -->
+    <meta property="og:url" content="https://mensajes-38hh.onrender.com/">
     <meta property="og:image" content="./img/iphone.webp">
-    <meta property="og:description" content="Conecta tus mensajes">  
+    <meta property="og:description" content="Conecta tus mensajes">
     <title>Mensajería</title>
     <link rel="shortcut icon" href="/img/megaphone.svg" type="image/x-icon">
     <link rel="stylesheet" href="/css/styles.css">
@@ -17,21 +17,21 @@
 <body>
 
     <section class="container">
-        <header style="color: hsl(246,  6%, 55%); font-weight: 500; align-items: center;">
+        <header class="header-style">
 
-            <div class="content-menu" style="margin-top: 15px;">
+            <div class="content-menu mt-15">
                 <img src="/img/menu.svg" alt="" id="menu">
             </div>
 
-            <nav id="nav" style="display: flex; justify-content: space-between;  margin-top: 15px; ">
-                <div style="margin-left: 30px;">
+            <nav id="nav" class="navStyle">
+                <div class="ml-30">
                     <ul>
-                        <img src="/img/megaphone.svg" alt="Logo">
+                        <img src="/img/megaphone.svg" alt="logo">
                     </ul>
                 </div>
 
-                <div style="margin-right: 30px;">
-                    <ul style="list-style: none; display: flex; gap: 25px; cursor: pointer;">
+                <div class="mr-30">
+                    <ul class="ulStyle">
                         <li>Características</li>
                         <li>Documentos</li>
                         <li>Acerca de</li>
@@ -48,19 +48,18 @@
         <aside>
 
 
-            <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+            <div class="flexWrapCenter">
 
                 <div class="content">
 
                     <article class="chat formBg">
 
                         <ul id="chat" class="messages"></ul>
-                        <form action="" class="form" id="message-box">
+                        <form  class="form" id="message-box">
 
-                            <input type="text" id="chat-message" class="input" autocomplete="off" style="width: 65%;"
+                            <input type="text" id="chat-message" class="input input65" autocomplete="off"
                                 placeholder="Escribe un mensaje">
-                            <button type="submit" class="firstButton"
-                                style="width: 15%; border-radius: 8px;  border: none;  background-image: linear-gradient(93.51deg, rgb(124, 71, 235) 10.94%, rgb(233, 53, 161) 86.95%);">
+                            <button type="submit" class="firstButton">
                                 <img src="/img/send.svg" alt="">
                             </button>
                         </form>
@@ -72,11 +71,11 @@
                     <article class="chat formBg">
                         <ul id="chatBrother" class="messages"></ul>
 
-                        <form action="" class="form" id="message-box-brother">
+                        <form  class="form" id="message-box-brother">
 
-                            <input type="text" name="message" class="input" id="chat-message-brother"
-                                placeholder="Escribe un mensaje" autocomplete="off" style="width: 65%;">
-                            <button type="submit" style="width: 15%; border-radius: 8px;  border: none;">
+                            <input type="text" name="message" class="input input65" id="chat-message-brother"
+                                placeholder="Escribe un mensaje" autocomplete="off" >
+                            <button type="submit" class="secondButton">
                                 <img src="/img/send.svg" alt="">
 
                             </button>
