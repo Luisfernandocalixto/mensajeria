@@ -15,12 +15,12 @@
 
 /* body */
 .content {
+    width: 100%;
     display: grid;
     place-content: center;
     height: 100vh;
     padding: 36px 36px 100px 36px;
     grid-template-rows: 1fr;
-    margin-bottom: 25px;
 }
 
 .formBg {
@@ -157,7 +157,7 @@
     }
 
     aside {
-        overflow: scroll;
+        /* overflow: scroll; */
 
     }
 
@@ -264,9 +264,15 @@ nav li:hover {
 
 .flexWrapCenter {
     margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
+    gap: 32px;
     justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    /* grid-template-rows: 1fr; */
+
+
 
 }
 
@@ -276,7 +282,7 @@ nav li:hover {
     border-radius: 8px;
     border: none;
     background-image: linear-gradient(93.51deg, rgb(124, 71, 235) 10.94%, rgb(233, 53, 161) 86.95%) !important;
-
+    cursor: pointer;
 }
 
 .input65 {
@@ -293,6 +299,7 @@ nav li:hover {
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
+    cursor: pointer;
 }
 
 .content-footer {
@@ -302,4 +309,8 @@ nav li:hover {
     position: absolute;
     width: 100%;
     top: -22px;
+}
+
+li {
+    list-style: none;
 }
