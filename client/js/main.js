@@ -2,8 +2,7 @@
 $(function () {
 
     //  socket
-    var socket = io();
-    let sender = ''
+    let socket = io();
 
     // variables 
     let message = $('#chat-message');
@@ -15,7 +14,7 @@ $(function () {
 
     $('#message-box').on('submit', (function (e) {
         e.preventDefault();
-        if (message.val().trim().lenght < 0 || message.val().trim() === '') return
+        if (message.val().trim().lenght < 0 || message.val().trim() === '') return;
         socket.emit('client', { message: message.val(), id: 'is1' });
         message.val('');
     }))
@@ -24,7 +23,7 @@ $(function () {
         const Iam = 'is1';
         const className = data.id === Iam ? 'isI' : 'isChat';
         chat.append(`<li class="${className}" >${data.message}</li>`);
-        chat.scrollTop(chat[0].scrollHeight)
+        chat.scrollTop(chat[0].scrollHeight);
         
     });
     
@@ -32,7 +31,7 @@ $(function () {
     $('#message-box-brother').on('submit', (async function (e) {
         e.preventDefault();
         
-        if (messageBrother.val().trim().lenght < 0 || messageBrother.val().trim() === '') return
+        if (messageBrother.val().trim().lenght < 0 || messageBrother.val().trim() === '') return;
         socket.emit('client', { message: messageBrother.val(), id: 'is2' });
         messageBrother.val('');
         
@@ -42,7 +41,7 @@ $(function () {
         const Iam = 'is2';
         const className = data.id === Iam ? 'isI' : 'isChat';
         chatBrother.append(`<li class="${className}"  >${data['message']}</li>`);
-        chatBrother.scrollTop(chatBrother[0].scrollHeight)
+        chatBrother.scrollTop(chatBrother[0].scrollHeight);
 
     });
 
@@ -51,4 +50,4 @@ $(function () {
 
 
 
-})
+});

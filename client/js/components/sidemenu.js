@@ -36,10 +36,10 @@ $(document).ready(function () {
             background: '#7a3576',
             showConfirmButton: false,
             showCloseButton: true,
-        })
+        });
 
 
 
-    })
+    });
 
-})
+});

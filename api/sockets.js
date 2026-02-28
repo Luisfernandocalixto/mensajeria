@@ -9,7 +9,7 @@ module.exports = function (server) {
         socket.on('client', async function (data) {
             console.log(data);
             
-            sockets.emit('server', data)
+            sockets.emit('server', data);
 
         })
     })
