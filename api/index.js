@@ -18,6 +18,8 @@ app.use(express.static(path.join(__dirname, '..' ,'public')));
 app.use(express.static(path.join(__dirname, '..' ,'client')));
 
 // middlewares 
+app.disable('x-powered-by');
+
 const limiter = rateLimit({
     windowMs: 60 * 1000, // 1 minute 
     max: 150, // limit each ip to 150 request
@@ -39,7 +41,7 @@ app.get('/', async (req, res) => {
 // initializations the server
 server.listen(app.get('port'), function () {
     console.log(`Server listening on http://localhost:${app.get('port')}`);
-})
+});
 
 // sockets
 require('./sockets.js')(server);

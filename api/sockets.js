@@ -11,7 +11,7 @@ module.exports = function (server) {
             
             sockets.emit('server', data);
 
-        })
-    })
+        });
+    });
 }
 
